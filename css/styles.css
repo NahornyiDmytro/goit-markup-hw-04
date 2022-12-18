@@ -134,8 +134,19 @@ body {
 .hero {
     padding-top: 192px;
     padding-bottom: 192px;
-    background-color: var(--background-color);
     text-align: center;
+}
+
+.overlay {
+    background-color: #2E2F42;
+    max-width: 1440px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(rgba(46,47,66,0.7), rgba(46,47,66,0.7)), url(../images/people-office.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .hero-title {
@@ -160,6 +171,21 @@ body {
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     margin-top: 48px;
+    border: 1px solid transparent;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+    border-radius: 4px;
+    background: var(--accent-color);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+
+}
+
+.hero-button:active {
+    border-radius: 4px;
+    background: #404BBF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* ABOUT */
@@ -181,12 +207,26 @@ body {
     font-size: 20px;
     line-height: 1.2;
     color: var(--title-text-color);
+    margin-top: 8px;
 }
 
 .about-text {
     margin-top: 8px;
     font-size: 16px;
     line-height: 1.5;
+}
+
+.about-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #F4F4FD;
+}
+
+.about-icon-svg {
+    width: 64px;
+    height: 64px;
 }
 
 /* WORK */
@@ -266,6 +306,74 @@ background-color: #FFFFFF;
     margin-top: 8px;
 }
 
+.team-link {
+    display: flex;
+    margin-top: 12px;
+    justify-content: center;
+}
+
+.team-icon {
+    padding: 0;
+    width: 16px;
+    height: 16px;
+}
+
+.team-link li:not(:last-child) {
+    margin-right: 24px;
+}
+
+.team-link-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--accent-color);
+}
+
+.clients-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    color: var(--title-text-color);
+}
+
+.clients-link {
+    display: flex;
+    margin-top: 72px;
+}
+
+.clients-link-bg {
+    display: flex;
+    fill: #8E8F99;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
+    height: 88px;
+    border-radius: 4px;
+    border: 1px solid;
+    border-color:#8E8F99;
+    cursor: pointer;
+}
+
+.clients-icon {
+    padding: 0;
+    width: 104px;
+    height: 56px;
+}
+
+.clients-link li:not(:last-child) {
+    margin-right: 24px;
+}
+
+.clients-link-bg:hover,.clients-link-bg:focus {
+    fill: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
 /* FOOTER */
 
 .footer {
@@ -289,6 +397,54 @@ background-color: #FFFFFF;
     color: #E7E9FC;
     margin-top: 16px;
     width: 264px;
+}
+
+.footer-possittion {
+    display: flex;
+    align-items: baseline;
+}
+
+.social {
+    margin-left: 120px;
+}
+
+.social-title {
+    font-weight: 600;
+    Font-size: 16px;
+    Line-height: 1.5;
+    color: #FFFFFF;
+}
+
+.social-link {
+    display: flex;
+    padding: 0;
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+
+.social-icon {
+    padding: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.social-link li:not(:last-child) {
+    margin-right: 16px;
+}
+
+.social-link-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-link-bg:hover,.social-link-bg:focus {
+    background-color: #31D0AA;
 }
 
 /* PORTFOLIO */
@@ -346,7 +502,8 @@ color: #FFFFFF;
 }
 
 .portfolio-main .item {
-    border: 0.5px solid #F4F4FD;
+    border: 0.5px solid;
+    border-color: #F4F4FD;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
@@ -369,4 +526,12 @@ color: #FFFFFF;
     padding-bottom: 32px;
     padding-left: 16px;
 }
+
+.portfolio-link:hover,.portfolio-link:focus {
+    display: block;
+    border: 0.5px solid;
+    border-color: #F4F4FD;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 
